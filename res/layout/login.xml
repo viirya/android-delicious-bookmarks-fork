@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="6dip"
+        android:paddingTop="2dip"
+        android:paddingRight="6dip"
+        android:paddingBottom="2dip">
+        <EditText
+            android:id="@+id/edit_username"
+            android:hint="@string/hint_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/edit_password"
+            android:hint="@string/hint_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:password="true" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/ButtonBar">
+            <Button
+                android:id="@+id/button_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_login"
+                android:layout_weight="1"
+                android:minEms="8" />
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_cancel"
+                android:layout_weight="1"
+                android:minEms="8" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

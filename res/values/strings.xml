@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Bookmarking for Delicious.com</string>
+	<string name="title_browse">Delicious</string>
+	<string name="title_add_bookmark">Save to Delicious</string>
+	<string name="title_login">Sign In</string>
+	<string name="label_url">URL</string>
+	<string name="label_title">TITLE</string>
+	<string name="label_notes">NOTES</string>
+	<string name="label_tags">TAGS</string>
+	<string name="hint_url">URL</string>
+	<string name="hint_title">Title</string>
+	<string name="hint_notes">Notes</string>
+	<string name="hint_tags">Tags (separated by spaces)</string>
+	<string name="label_recommended_tags">Recommended Tags</string>
+	<string name="label_popular_tags">Popular Tags</string>
+	<string name="label_tags_loading">Loading...</string>
+	<string name="label_tags_none">None</string>
+	<string name="label_do_not_share">Mark as Private</string>
+   <string name="current_user">Signed in as <b>^1</b></string>
+   <string name="current_user_none">Not signed in</string>
+	<string name="hint_username">Username</string>
+	<string name="hint_password">Password</string>
+	<string name="button_save">Save</string>
+	<string name="button_cancel">Cancel</string>
+   <string name="button_discard">Discard</string>
+	<string name="button_login">Sign In</string>
+	<string name="button_logout">Sign Out</string>
+	<string name="title_saving">Saving</string>
+
+	<string name="message_saving">Saving to Delicious</string>
+	<string name="message_tag_added">Added tag "{0}"</string>
+	<string name="error_url_empty">URL is required</string>
+	<string name="error_title_empty">Title is required</string>
+</resources>

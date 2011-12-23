@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Zakładki dla Delicious.com</string>
+	<string name="title_browse">Delicious</string>
+	<string name="title_add_bookmark">Zapisz do Delicious</string>
+	<string name="title_login">Zaloguj się</string>
+	<string name="label_url">URL</string>
+	<string name="label_title">TYTUŁ</string>
+	<string name="label_notes">NOTATKI</string>
+	<string name="label_tags">ETYKIETY</string>
+	<string name="hint_url">URL</string>
+	<string name="hint_title">Tytuł</string>
+	<string name="hint_notes">Notatki</string>
+	<string name="hint_tags">Etykiety (rozdzielone spacjami)</string>
+	<string name="label_recommended_tags">Polecane etykiety</string>
+	<string name="label_popular_tags">Popularne etykiety</string>
+	<string name="label_tags_loading">Ładowanie...</string>
+	<string name="label_tags_none">Brak</string>
+	<string name="label_do_not_share">Oznacz jako prywatne</string>
+   <string name="current_user">Zalogowany jako <b>^1</b></string>
+   <string name="current_user_none">Nie zalogowany</string>
+	<string name="hint_username">Użytkownik</string>
+	<string name="hint_password">Hasło</string>
+	<string name="button_save">Zapisz</string>
+	<string name="button_cancel">Anuluj</string>
+   <string name="button_discard">Odrzuć</string>
+	<string name="button_login">Zaloguj</string>
+	<string name="button_logout">Wyloguj</string>
+	<string name="title_saving">Zapisywanie</string>
+	<string name="message_saving">Zapisywanie do Delicious</string>
+	<string name="message_tag_added">Dodano etykietę "{0}"</string>
+	<string name="error_url_empty">URL jest wymagany</string>
+	<string name="error_title_empty">Tytuł jest wymagany</string>
+</resources>

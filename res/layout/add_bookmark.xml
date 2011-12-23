@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/title_bar_tall"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="9dip"
+        android:paddingRight="5dip">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:src="@drawable/icon" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dip">
+            <TextView
+                android:text="@string/title_add_bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"
+                android:shadowRadius="1"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowColor="#000000" />
+            <TextView
+                android:id="@+id/user"
+                android:text="@string/current_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:shadowRadius="1"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowColor="#000000" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="6dip"
+            android:paddingTop="2dip"
+            android:paddingRight="6dip"
+            android:paddingBottom="2dip">
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_url"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_url"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/edit_url"
+                        android:inputType="textUri"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_url"
+                        android:singleLine="true" />
+                    <ProgressBar
+                        android:id="@+id/progress_url"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_title"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/edit_title"
+                        android:inputType="textCapWords"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_title" />
+                    <ProgressBar
+                        android:id="@+id/progress_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_notes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_notes"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/edit_notes"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:minLines="2"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_notes"
+                        android:gravity="top" />
+                    <ProgressBar
+                        android:id="@+id/progress_notes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/label_tags"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_tags"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <MultiAutoCompleteTextView
+                        android:id="@+id/edit_tags"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/hint_tags" />
+                    <ProgressBar
+                        android:id="@+id/progress_tags"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </TableRow>
+            </TableLayout>
+            <CheckBox
+                android:id="@+id/check_do_not_share"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_do_not_share" />
+            <TextView
+                android:id="@+id/label_recommended_tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_recommended_tags"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/text_recommended_tags"
+                    android:paddingLeft="6dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:lineSpacingMultiplier="1.25"
+                    android:text="@string/label_tags_loading"
+                    android:layout_gravity="center_vertical" />
+                <ProgressBar
+                    android:id="@+id/progress_recommended_tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/label_popular_tags"
+                android:paddingTop="6dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_popular_tags"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/text_popular_tags"
+                    android:paddingLeft="6dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:lineSpacingMultiplier="1.25"
+                    android:text="@string/label_tags_loading"
+                    android:layout_gravity="center_vertical" />
+                <ProgressBar
+                    android:id="@+id/progress_popular_tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        style="@android:style/ButtonBar">
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_save"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/button_discard"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_discard"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>
