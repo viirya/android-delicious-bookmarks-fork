@@ -126,9 +126,8 @@ public class AdditionalKeyStoresSSLSocketFactory extends SSLSocketFactory {
                 }
                 Log.d(LOG_TAG, "Can't find X509TrustManager."); 
             }
-            // Accept certificate from delicious site since there is a problem in checking it.
-            return; 
-            //throw new CertificateException();
+
+            throw new CertificateException();
         }
 
         public X509Certificate[] getAcceptedIssuers() {
