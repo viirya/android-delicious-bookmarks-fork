@@ -90,7 +90,7 @@ public class AdditionalKeyStoresSSLSocketFactory extends SSLSocketFactory {
                     if (tm instanceof X509TrustManager)
                         x509TrustManagers.add( (X509TrustManager)tm );
 
-            Log.d(LOG_TAG, "x509TrustManager: " + x509TrustManagers.size());
+            // Log.d(LOG_TAG, "x509TrustManager: " + x509TrustManagers.size());
 
             if( x509TrustManagers.size()==0 )
                 throw new RuntimeException("Couldn't find any X509TrustManagers");
@@ -109,22 +109,24 @@ public class AdditionalKeyStoresSSLSocketFactory extends SSLSocketFactory {
          * Loop over the trustmanagers until we find one that accepts our server
          */
         public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+            /*
             Log.d(LOG_TAG, "Type: " + authType);
             for(X509Certificate cert: chain) {
                 Log.d(LOG_TAG, "Subject: " + cert.getSubjectDN().toString());
             }
+            */
             int i = 0;
             for( X509TrustManager tm : x509TrustManagers ) {
-                Log.d(LOG_TAG, "Count: " + i++);
+                //Log.d(LOG_TAG, "Count: " + i++);
                 try {
                     tm.checkServerTrusted(chain,authType);
-                    Log.d(LOG_TAG, "Find X509TrustManager.");
+                    //Log.d(LOG_TAG, "Find X509TrustManager.");
                     return;
                 } catch( CertificateException e ) {
                     // ignore
-                    Log.d(LOG_TAG, "Message: " + e.getMessage());
+                    //Log.d(LOG_TAG, "Message: " + e.getMessage());
                 }
-                Log.d(LOG_TAG, "Can't find X509TrustManager."); 
+                //Log.d(LOG_TAG, "Can't find X509TrustManager."); 
             }
 
             throw new CertificateException();

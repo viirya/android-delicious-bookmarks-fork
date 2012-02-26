@@ -170,7 +170,7 @@ public class DeliciousApiRequest implements Runnable {
 	private InputStream readFromNetwork() throws IOException {
 		long start = now();
 		try {
-            Log.d(LOG_TAG, "URL: " + mUri);
+            // Log.d(LOG_TAG, "URL: " + mUri);
 			HttpGet request = new HttpGet(String.valueOf(mUri));
 			HttpResponse response = mClient.execute(request);
 			StatusLine status = response.getStatusLine();

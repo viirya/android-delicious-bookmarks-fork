@@ -39,7 +39,7 @@ public class MyHttpClient extends DefaultHttpClient {
       InputStream in = context.getResources().openRawResource(R.raw.mystore);
       try {
         trusted.load(in, "ez24get".toCharArray());
-        Log.d(LOG_TAG, "Read KeyStore");
+        // Log.d(LOG_TAG, "Read KeyStore");
       } finally {
         in.close();
       }
